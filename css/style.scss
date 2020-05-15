@@ -1,10 +1,8 @@
 /************************************************************
 Fichier : style.scss
-Theme name :
-Description: 
+Theme name : TodoList 
+Description: Tuto original by Dev Ed (https://youtu.be/Ttf3CEsEwMQ)
 Author: Shay Reichert
-Version: 1.0
-Tags:
 **************************************************************
 
 Table of Contents:
@@ -12,9 +10,10 @@ Table of Contents:
 0. Import (fonts, sass...)
 1. BODY
 2. HEADER
-3. SECTIONS
-4. FOOTER
+3. FORM
+4. LIST
 5. SELECT
+6. MEDIAQUERIES
 
 **************************************************************/
 
@@ -191,7 +190,6 @@ select {
 }
 
 .select {
-    border: 3px solid green;
     margin: 1rem;
     position: relative;
     overflow: hidden;
@@ -232,6 +230,6 @@ select {
         flex-direction: column;
     }
     .select {
-        right: 1rem;
+        right: .8rem;
     }
 }
