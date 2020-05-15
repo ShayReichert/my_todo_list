@@ -1,0 +1,201 @@
+/************************************************************
+Fichier : style.scss
+Theme name :
+Description: 
+Author: Shay Reichert
+Version: 1.0
+Tags:
+**************************************************************
+
+Table of Contents:
+
+0. Import (fonts, sass...)
+1. BODY
+2. HEADER
+3. SECTIONS
+4. FOOTER
+5. SELECT
+
+**************************************************************/
+/************************************************
+0.	Import
+************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/************************************************
+1.	BODY
+************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", Arial, sans-serif;
+  background-image: linear-gradient(to right top, #051418, #1177a7);
+  color: white; }
+
+/************************************************
+2.	HEADER
+************************************************/
+header {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px black; }
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+/************************************************
+3.	FORM
+************************************************/
+form input {
+  padding: .7rem;
+  font-size: 1.7rem;
+  border: none;
+  background: #ffffffdc;
+  box-shadow: 1px 1px 2px #000000b0;
+  outline: none;
+  border-radius: 3px;
+  padding-left: .9rem; }
+  form input:hover {
+    background: #ffffffee;
+    box-shadow: 2px 2px 4px #000000b0; }
+  form input:focus {
+    background: #ffffff;
+    box-shadow: 1px 1px 2px #000000b0; }
+
+form button {
+  background: none;
+  padding: .7rem;
+  font-size: 1.7rem;
+  border: none;
+  outline: none;
+  color: #d6340cd3;
+  text-shadow: 0.5px 0.5px 1px black;
+  cursor: pointer;
+  transition: all 0.25s ease; }
+  form button:hover {
+    color: #d6340c;
+    text-shadow: 1px 1px 2px black; }
+  form button:active {
+    opacity: .8; }
+
+/************************************************
+4.	LIST
+************************************************/
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.todo-list {
+  min-width: 30%;
+  list-style: none; }
+
+.todo {
+  padding: .2rem .2rem;
+  margin: .5rem;
+  background: #ffffffdc;
+  color: black;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  transition: all .3s ease; }
+  .todo li {
+    flex: 1; }
+
+.todo-item {
+  padding-left: .5rem; }
+
+.trash-btn,
+.complete-btn {
+  margin: 0 3px;
+  border: none;
+  padding: .7rem;
+  cursor: pointer;
+  font-size: .9rem;
+  border-radius: 5px;
+  outline: none; }
+  .trash-btn:active,
+  .complete-btn:active {
+    opacity: .8; }
+
+.complete-btn {
+  color: white;
+  background-color: #0cd699;
+  margin-left: 1rem; }
+
+.trash-btn {
+  background: none; }
+
+.fa-trash-alt,
+.fa-check {
+  pointer-events: none; }
+
+.completed {
+  text-decoration: line-through;
+  opacity: .5; }
+
+.fall {
+  transform: scale(0.9);
+  opacity: 0; }
+
+/************************************************
+5.	SELECT
+************************************************/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #051418;
+  width: 8rem;
+  cursor: pointer;
+  padding: .8rem;
+  background: #ffffffdc; }
+
+.select {
+  border: 3px solid green;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #ffffffdc; }
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    color: #1177a7;
+    background: #ffffffdc;
+    top: -7px;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .5s ease; }
+  .select:hover::after {
+    color: #051418; }
+  .select:hover {
+    color: #051418;
+    box-shadow: 1px 1px 4px #00000098; }
+  .select:focus {
+    background: #ffffff; }
+
+/************************************************
+6.	MEDIAQUERIES
+************************************************/
+@media (max-width: 520px) {
+  form {
+    flex-direction: column; }
+
+  .select {
+    right: 1rem; } }
+
+/*# sourceMappingURL=style.css.map */
